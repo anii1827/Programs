@@ -67,12 +67,12 @@ public class VerticalOrderTraversal implements Traversal{
 				list.add(y);
 			}
 		}
-		
-		
-		
 		return list;
 	}
-	
+	public void checking()
+	{
+		
+	}
 	
 	
 	
