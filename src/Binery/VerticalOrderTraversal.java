@@ -13,12 +13,15 @@ public class VerticalOrderTraversal implements Traversal{
 	LinkedHashMap<Integer, List<Integer>> table= new LinkedHashMap<>();
 	Queue<details> queue = new LinkedList<>();
 	Node root;
+	
+	//initialize the field
 	public VerticalOrderTraversal(BineryTree tree) {
 		this.root=tree.getRoot();
 		queue.add(new details(root,0));
 		
 	}
 	
+	//perfrom the level order with some required functionilty
 	@Override
 	public ArrayList<Integer> traverse() {
 		while(!queue.isEmpty()) {
@@ -31,6 +34,7 @@ public class VerticalOrderTraversal implements Traversal{
 		return result();
 	}
 	
+	//saving details to the map regarding the NOde
 	public void fill(int Hd, Node root) {
 		if(table.containsKey(Hd)) {
 			List<Integer> l = table.get(Hd);
@@ -44,6 +48,7 @@ public class VerticalOrderTraversal implements Traversal{
 		}
 	}
 	
+	//provide the specific result
 	public ArrayList<Integer> result(){
 		List<Integer> list = new ArrayList<>(table.keySet());
 		Collections.sort(list);
@@ -57,6 +62,7 @@ public class VerticalOrderTraversal implements Traversal{
 	}
 }
 
+//required class which contains node details plus some Horizontal distance
 class details{
     Node root;
     int HD;
