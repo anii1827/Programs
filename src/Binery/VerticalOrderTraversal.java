@@ -74,6 +74,10 @@ public class VerticalOrderTraversal implements Traversal{
 		
 	}
 	
+	public void test() {
+		
+	}
+	
 	
 	
 }
