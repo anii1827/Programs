@@ -6,7 +6,7 @@ import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class TopView implements Traversal{
+public class TopView implements view{
 
 	Queue<NodeDetails> queue;
 	ArrayList<Integer> list;
@@ -18,19 +18,17 @@ public class TopView implements Traversal{
 		list = new ArrayList<>();
 		table = new Hashtable<>();
 		queue.add(new NodeDetails(0, tree.getRoot()));
-		traverse();
 	}
 	
 	//traverser the vertical order provde the nodedetail to further process to check method
 	@Override
-	public ArrayList<Integer> traverse() {
+	public ArrayList<Integer> View() {
 		while(!queue.isEmpty()) {
 			NodeDetails nodeDetails = queue.poll();
 			check(nodeDetails);
 			if(nodeDetails.node.getLeft()!=null)queue.add(new NodeDetails(nodeDetails.HD-1, nodeDetails.node.getLeft()));
-			if(nodeDetails.node.getRight()!=null)queue.add(new NodeDetails(nodeDetails.HD-1, nodeDetails.node.getRight()));
+			if(nodeDetails.node.getRight()!=null)queue.add(new NodeDetails(nodeDetails.HD+1, nodeDetails.node.getRight()));
 		}
-
 		return sort();
 	}
 
@@ -53,12 +51,4 @@ public class TopView implements Traversal{
 	}
 }
 
-//simple model class to save
-//the node horizontal distance and node.
-class NodeDetails{
-		int HD;Node node;
-		public NodeDetails(int hd,Node node) {
-			this.HD=hd;
-			this.node=node;
-		}
-}
+

@@ -13,8 +13,6 @@ public class InorderTraversal implements Traversal {
 		function(root);
 	}
 	
-	
-	
 	public void function(Node node){
 		if(node==null) {
 			   return;
@@ -23,8 +21,6 @@ public class InorderTraversal implements Traversal {
 		   list.add(node.getData());
 		   function(node.getRight());
 	}
-
-
 
 	@Override
 	public ArrayList<Integer> traverse() {

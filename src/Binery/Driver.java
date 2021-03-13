@@ -2,6 +2,7 @@ package Binery;
 
 public class Driver {
 	static Traversal traverse;
+	static view view;
 		public static void main(String [] args) {
 			BineryTree tree = new BineryTreeImpl();
 			tree.add(10);
@@ -39,8 +40,11 @@ public class Driver {
 //			traverse = new LeverOrderTraversal(tree);
 //			traverse.traverse().stream().forEach(T-> System.out.print(T+" "));
 //			System.out.println();
-			traverse = new VerticalOrderTraversal(tree);
-			traverse.traverse();
+//			traverse = new ZigZagTraversal(tree);
+//			traverse.traverse().stream().forEach(T-> System.out.print(T+" "));
+			
+			LowestCommonAncester LCA = new LowestCommonAncester();
+			System.out.println(LCA.find(tree.getRoot(), 12, 14).getData());
 //			System.out.println("after remove element 15 from queue.");
 //			tree.remove(15);
 //			System.out.println();
@@ -61,6 +65,5 @@ public class Driver {
 //			System.out.println("Level Traversal");
 //			traverse = new LeverOrderTraversal(tree);
 //			traverse.traverse().stream().forEach(T-> System.out.print(T+" "));
-			
 		}
 }
