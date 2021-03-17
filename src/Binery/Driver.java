@@ -43,13 +43,15 @@ public class Driver {
 //			traverse = new ZigZagTraversal(tree);
 //			traverse.traverse().stream().forEach(T-> System.out.print(T+" "));
 			
-			LowestCommonAncester LCA = new LowestCommonAncester();
-			System.out.println(LCA.find(tree.getRoot(), 12, 14).getData());
+//			LowestCommonAncester LCA = new LowestCommonAncester();
+//			System.out.println(LCA.find(tree.getRoot(), 12, 14).getData());
+			view view = new BottomView(tree);
+			view.View().stream().forEach(T-> System.out.print(T+" "));
 //			System.out.println("after remove element 15 from queue.");
 //			tree.remove(15);
 //			System.out.println();
 //			System.out.println("Inorder Traversal ");
-//			traverse = new InorderTraversal(tree);
+//			traverse = new InorderTraversal(in.invert());
 //			traverse.traverse().stream().forEach(T-> System.out.print(T+" "));
 //			System.out.println();
 //			System.out.println("Preorder Traversal");

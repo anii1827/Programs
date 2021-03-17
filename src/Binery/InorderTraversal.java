@@ -13,6 +13,11 @@ public class InorderTraversal implements Traversal {
 		function(root);
 	}
 	
+	public InorderTraversal(Node node) {
+		this.root = node;
+		function(root);
+	}
+	
 	public void function(Node node){
 		if(node==null) {
 			   return;

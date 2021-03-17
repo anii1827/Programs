@@ -45,9 +45,9 @@ public class TopView implements view{
 	//main logic of the whole program track the unique HOrixontal distance in both left and right side
 	//and push into the queue.
 	private void check(NodeDetails nodeDetails) {
-			if(!table.containsKey(nodeDetails.HD)) {
-				table.put(nodeDetails.HD, nodeDetails.node.getData());
-			}
+		if(!table.containsKey(nodeDetails.HD)) {
+			table.put(nodeDetails.HD, nodeDetails.node.getData());
+		}
 	}
 }
 

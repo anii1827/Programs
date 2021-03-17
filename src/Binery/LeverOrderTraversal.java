@@ -9,18 +9,22 @@ import java.util.Queue;
 
 public class LeverOrderTraversal implements Traversal {
 	
-	Node root;
-	Queue<Node> queue;
-	private int level=0;
-	ArrayList<Integer> list;
+	static Node root;
+	static Queue<Node> queue;
+	static ArrayList<Integer> list;
 	
 	public LeverOrderTraversal(BineryTree tree) {
-		this.root=tree.getRoot();
+		root=tree.getRoot();
 		queue = new LinkedList<>();
 		queue.add(root);
 		list = new ArrayList<>();
-		
 	}	
+	public LeverOrderTraversal(Node node) {
+		root=node;
+		queue = new LinkedList<>();
+		queue.add(root);
+		list = new ArrayList<>();
+	}
 	
 	@Override
 	public ArrayList<Integer> traverse() {

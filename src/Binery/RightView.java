@@ -30,7 +30,11 @@ public class RightView implements view{
 			if(node.node.getLeft()!=null)queue.add(new NodeDetails(hd, node.node.getLeft()));
 			
 		}
+		int x=0, y=1;
+		Math.max(x, y);
 		return list;
+		
+		
 	}
 
 }
